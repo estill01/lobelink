@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+	<div id="index_user_#{user.id}">
+		<h1><%= user.username %></h1>
+		<%= link_to("View policies", user_policies_path(user)) %>
+	</div>
+<% end %>

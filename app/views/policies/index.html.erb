@@ -1,0 +1,19 @@
+<% title "Policies" %>
+
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Explanation</th>
+  </tr>
+  <% for policy in @policies %>
+    <tr>
+      <td><%= policy.position %></td>
+      <td><%= policy.explanation %></td>
+      <td><%= link_to "Show", policy %></td>
+      <td><%= link_to "Edit", edit_policy_path(policy) %></td>
+      <td><%= link_to "Destroy", policy, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Policy", new_policy_path %></p>

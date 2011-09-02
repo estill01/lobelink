@@ -1,0 +1,16 @@
+<%= form_for @goal do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :objective %><br />
+    <%= f.text_field :objective %>
+  </p>
+  <p>
+    <%= f.label :explanation %><br />
+    <%= f.text_field :explanation %>
+  </p>
+  <p>
+    <%= f.label :policy_id %><br />
+    <%= f.number_field :policy_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

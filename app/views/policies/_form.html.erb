@@ -1,0 +1,12 @@
+<%= form_for @policy do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :explanation %><br />
+    <%= f.text_field :explanation %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

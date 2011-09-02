@@ -1,0 +1,16 @@
+<% title "Policy" %>
+
+<p>
+  <strong>Position:</strong>
+  <%= @policy.position %>
+</p>
+<p>
+  <strong>Explanation:</strong>
+  <%= @policy.explanation %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_policy_path(@policy) %> |
+  <%= link_to "Destroy", @policy, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", policies_path %>
+</p>

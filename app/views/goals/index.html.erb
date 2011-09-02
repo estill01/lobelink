@@ -1,0 +1,21 @@
+<% title "Goals" %>
+
+<table>
+  <tr>
+    <th>Objective</th>
+    <th>Explanation</th>
+    <th>Policy</th>
+  </tr>
+  <% for goal in @goals %>
+    <tr>
+      <td><%= goal.objective %></td>
+      <td><%= goal.explanation %></td>
+      <td><%= goal.policy_id %></td>
+      <td><%= link_to "Show", goal %></td>
+      <td><%= link_to "Edit", edit_goal_path(goal) %></td>
+      <td><%= link_to "Destroy", goal, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Goal", new_goal_path %></p>

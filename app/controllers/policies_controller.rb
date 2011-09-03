@@ -19,7 +19,7 @@ class PoliciesController < ApplicationController
 		@user = User.find(params[:user_id])
 		@policy = @user.policies.build(params[:policy])
     if @policy.save
-      redirect_to @policy, :notice => "Successfully created policy."
+      redirect_to @user, :notice => "Successfully created policy."
     else
       render :action => 'new'
     end

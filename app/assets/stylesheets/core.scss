@@ -44,12 +44,20 @@ a {
 		height: 100%;
 		margin: 0 auto;
 		padding: 0px 40px;
+		background-color:green;
 
 		#nav_left_side {
+			display:inline;
+			position: relative;
+			width: 450px;
+			height: 100%;
 			background-color: yellow;
 
 		}
 		#nav_right_side {
+			display:inline;
+			position:relative;
+
 			width: 50%;
 		}
 		#logo {

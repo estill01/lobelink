@@ -12,10 +12,13 @@
 			<div id="nav_container">
 				<div id="nav_left_side">
 					<div id="logo">
-						<%= link_to("LobeLink", root_path) %>
+						<%= link_to("Civisense", root_path) %>
 					</div>
 					<div id="new_policy">
-						<%= link_to("New Policy", current_user ? new_user_policy_path(current_user) : login_path) %>
+						<dl>
+							<dt><%= link_to("Make Policy", current_user ? new_user_policy_path(current_user) : login_path) %></dt>
+							<dd>lead the way</dd>
+						</dl>
 					</div>
 				</div>
 				<div id="nav_right_side">

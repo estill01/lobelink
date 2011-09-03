@@ -6,6 +6,11 @@ body {
   font-family: Helvetica, Arial;
   font-size: 14px;
 	margin: 0;
+	color: #242323;
+}
+
+h1 {
+	text-shadow: -1px 1px 1px #7d7468;
 }
 
 a img {
@@ -41,54 +46,78 @@ a {
 
 	#nav_container {
 		width: $page_width;
-		height: 100%;
+		height: 50px;
 		margin: 0 auto;
 		padding: 0px 40px;
+		
+		dl {
+				display:block;
+				padding: 0 10px 0 10px;
+
+			dt {
+				font-weight: bold;
+			}
+			dd {
+				float:left;
+				color:white;
+				font-size:12px;
+				margin: 0;	
+				padding: 0 0 0 4px;
+			}
+		}
 
 		#nav_left_side {
 			display:inline;
+			float:left;
 			position: relative;
-			width: 450px;
+			width: 50%;
 			height: 100%;
-			background-color: yellow;
 
+			#logo {
+				display:inline;
+				float:left;
+				position: relative;
+				font-weight: bold;
+				font-size: 23px;
+				text-decoration: none;
+				padding: 13px 10px 0 0;
+				a {
+					color: #f7f3eb;
+					text-decoration: none;
+					text-shadow: 0px -1px 1px #4d3000;
+				}
+			}
+			#new_policy {
+				float:left;
+				border-right: 2px solid #e39309;
+				border-left: 2px solid #e39309;
+				width: auto;
+				height:100%;
+				text-shadow: 0px -1px 1px #d1861d;
+				a {
+					color: #f7f3eb;
+					text-decoration: none;
+				}
+			}
 		}
+
 		#nav_right_side {
 			display:inline;
 			position:relative;
-
-			width: 50%;
-		}
-		#logo {
-			font-weight: bold;
-			font-size: 23px;
-			text-decoration: none;
-			padding: 13px 10px 0 0;
 			float:left;
-			a {
-				color: #f7f3eb;
-				text-decoration: none;
-				text-shadow: 0px -1px 1px #4d3000;
+			width: 50%;
+			height:100%;
+			text-align:right;
+			
+			#logins {
+				margin: 15px 0 0 0;
+				a {
+					font-weight:bold;
+					text-shadow: 0px -1px 1px #b36c09;
+					text-decoration: none;
+					color: white;
+				}
 			}
-		}
-		#new_policy {
-			height: 100%;
-			width: 100px;
-			p {
-				padding: 5px 0 0 0;
-			}
-
-			text-align: center;
-			display: inline;
-			float: left;
-			border-right: 2px solid #e39309;
-			border-left: 2px solid #db8f0b;
-			a {
-				padding: 15px 0 0 0;
-				color: #f7f3eb;
-				text-decoration: none;
-			}
-
 		}
 	}
 }
@@ -100,9 +129,9 @@ a {
   width: $page_width;
   margin: 0 auto;
   background-color: #FFF;
-  padding: 20px 40px;
-  border-left: solid 1px black;
-	border-right: solid 1px black;
+  padding: 30px 40px;
+  border-left: solid 1px #e0ae67;
+  border-right: solid 1px #e0ae67;
 	
   margin-top: 20px;
 }

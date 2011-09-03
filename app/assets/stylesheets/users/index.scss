@@ -1,18 +1,38 @@
+@import 'bourbon';
 
-.index_user_listing {
+.user_listing {
 	position: relative;
 	display: block;
+	height: 80px;
 	padding: 0 0 20px 0;
 	clear: both;
 
-	.index_user_avatar {
+	.user_avatar {
 		position: inline;
 		float: left;
 		padding: 0 10px 0 0;
 	}
 
-	.index_user_details {
+	.user_details {
 		position: inline;
 		clear: right; 
+		font-size: 13px;
 	}
 }
+
+h2 {
+	padding: 0;
+	margin: 0;
+}
+.header_link {
+	color: #1f1f1f;
+	text-decoration: none;
+}
+
+
+.subtext {
+	padding: 0;
+	margin: 0;
+	font-style: italic;
+}
+	

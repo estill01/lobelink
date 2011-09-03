@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :login_required, :except => [:new, :create]
+  before_filter :login_required, :except => [:new, :create, :index]
 
 	def index
 		@users = User.find(:all)
@@ -31,4 +31,12 @@ class UsersController < ApplicationController
       render :action => 'edit'
     end
   end
+
+	def show
+		@user = User.find(params[:id])
+	end
+
+	def destroy
+
+	end
 end

@@ -10,7 +10,7 @@ Frontdoor::Application.routes.draw do
   match 'logout' => 'sessions#destroy', :as => :logout
   match 'login' => 'sessions#new', :as => :login
 
-  	root :to => "users#new"
+  root :to => "users#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

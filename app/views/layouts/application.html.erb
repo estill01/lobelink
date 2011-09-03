@@ -8,6 +8,13 @@
     <%= yield(:head) %>
   </head>
   <body>
+		<nav id="system_nav">
+			<div id="nav_container">
+				<div id="logo">
+					<%= link_to("LobeLink", root_path) %>
+				</div>
+			</div>
+		</nav>
     <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>

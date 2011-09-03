@@ -1,0 +1,9 @@
+
+Change Policies Explanation data type from :string to :text
+	:string has a 255 char limit
+	Made a migration, but seems to not work
+
+Local db is totally fucked
+
+
+

@@ -1,0 +1,23 @@
+@import 'bourbon';
+
+#new_policy {
+	input, textarea {
+		font-size: 14px;
+		font-family: helvetica;
+		padding: 5px;
+		width: 380px;
+	}
+
+	#policy_topic {
+		width: 120px;
+	}
+
+	#policy_position {
+
+	}
+
+	#policy_explanation {
+
+	}
+
+}

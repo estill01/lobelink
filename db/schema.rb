@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20110903174912) do
 
   create_table "policies", :force => true do |t|
     t.string   "position"
-    t.text     "explanation", :limit => 255
+    t.text     "explanation" 
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"

@@ -6,7 +6,7 @@
 		<header class="details_header">
 			<h2><%= link_to(user.username.capitalize, user_path(user), :class => "header_link") %></h2>
 			<p class="subtext">
-				Leading the way for <%= distance_of_time_in_words(user.created_at, Time.now) %> 
+				Engaged in society for <%= distance_of_time_in_words(user.created_at, Time.now) %> 
 			</p>
 		</header>
 		<div class="details_body">

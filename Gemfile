@@ -8,14 +8,8 @@ gem 'thin'
 gem 'nifty-generators'
 gem 'gravtastic' 
 gem 'formtastic'
+gem 'pg', :group => [:production, :development, :test]
 
-group :development do
-	gem 'sqlite3'
-end
-
-group :production do
-	gem 'pg', :require => 'pg' 
-end
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
@@ -26,5 +20,4 @@ end
 
 group :test do
   gem 'turn', :require => false
-	gem 'sqlite3'
 end

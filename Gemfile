@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-gem 'sqlite3'
 gem 'pg'
 gem 'heroku'
-
+gem 'taps'
+gem 'thin'
 gem 'nifty-generators'
 gem 'gravtastic' 
 gem 'formtastic'

@@ -133,8 +133,9 @@ a {
   padding: 30px 40px;
   border-left: solid 1px #e0ae67;
   border-right: solid 1px #e0ae67;
-	
+	min-height: 500px;
   margin-top: 20px;
+	@include background-image(linear-gradient(bottom, #fff9f0, white 12%));
 }
 
 #flash_notice, #flash_error, #flash_alert {

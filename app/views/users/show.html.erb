@@ -3,7 +3,9 @@
 
 <h2>Policies</h2>
 <% @user.policies.each do |policy| %>
-	<h3><%= policy.position %></h3>
-	<%= policy.topic %>
-	<%= policy.explanation %>
+	<div class="user_policy">
+		<h3 class="policy_position"><%= policy.position %></h3>
+		<%= policy.topic %>
+		<%= policy.explanation %>
+	</div>
 <% end %>

@@ -1,6 +1,2 @@
-<% @users.each do |user| %>
-	<div id="index_user_#{user.id}">
-		<h1><%= user.username %></h1>
-		<%= link_to("View policies", user_policies_path(user)) %>
-	</div>
-<% end %>
+<h1>Policy Makers</h1>
+<%= render :partial => "user_info", :collection => @users, :as => :user %> 

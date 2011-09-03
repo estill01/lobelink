@@ -1,0 +1,18 @@
+
+.index_user_listing {
+	position: relative;
+	display: block;
+	padding: 0 0 20px 0;
+	clear: both;
+
+	.index_user_avatar {
+		position: inline;
+		float: left;
+		padding: 0 10px 0 0;
+	}
+
+	.index_user_details {
+		position: inline;
+		clear: right; 
+	}
+}

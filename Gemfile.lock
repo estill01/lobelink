@@ -44,6 +44,7 @@ GEM
     erubis (2.7.0)
     execjs (1.2.4)
       multi_json (~> 1.0)
+    gravtastic (3.2.6)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.13)
@@ -54,7 +55,6 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    mocha (0.9.12)
     multi_json (1.0.3)
     nifty-generators (0.4.6)
     polyglot (0.3.2)
@@ -110,10 +110,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby
   coffee-rails (~> 3.1.0)
+  gravtastic
   jquery-rails
-  mocha
   nifty-generators
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)

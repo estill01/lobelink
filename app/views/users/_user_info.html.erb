@@ -1,0 +1,23 @@
+<section class="user_listing" id="user_<%= user.id %>">
+	<div class="user_avatar" id="user_<%= user.id %>_avatar">
+		<%= link_to(image_tag(user.gravatar_url), user_path(user)) %>
+	</div>
+	<div class="user_details" id="user_<%= user.id %>_details">
+		<header class="details_header">
+			<h2><%= link_to(user.username.capitalize, user_path(user), :class => "header_link") %></h2>
+			<p class="subtext">
+				Joined <%= distance_of_time_in_words(user.created_at, Time.now) %> ago
+			</p>
+		</header>
+		<div class="details_body">
+
+		</div>
+		<footer class="details_footer">
+			<%= link_to("#{user.policies.count} policies", user_policies_path(user)) %>
+		</footer>
+	</div>
+</section>
+
+
+
+

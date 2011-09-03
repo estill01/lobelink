@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  # new columns need to be added here to be writable through mass assignment
+	include Gravtastic
+	gravtastic
+
   attr_accessible :username, :email, :password
 
   attr_accessor :password

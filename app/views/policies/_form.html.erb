@@ -1,12 +1,16 @@
-<%= form_for @policy do |f| %>
+<%= form_for ([@user, @policy]), :url => user_policies_path do |f| %>
   <%= f.error_messages %>
+	<p>
+		<%= f.label :topic %><br/>
+		<%= f.text_field :topic %>
+	</p>
   <p>
     <%= f.label :position %><br />
     <%= f.text_field :position %>
   </p>
   <p>
     <%= f.label :explanation %><br />
-    <%= f.text_field :explanation %>
+    <%= f.text_area :explanation %>
   </p>
   <p><%= f.submit %></p>
 <% end %>

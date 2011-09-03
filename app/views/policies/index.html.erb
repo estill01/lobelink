@@ -2,18 +2,20 @@
 
 <table>
   <tr>
+		<th>Topic</th>
     <th>Position</th>
     <th>Explanation</th>
   </tr>
-  <% for policy in @policies %>
+  <% @policies.each do |policy| %>
     <tr>
+			<td><%= policy.topic %></td>
       <td><%= policy.position %></td>
       <td><%= policy.explanation %></td>
-      <td><%= link_to "Show", policy %></td>
-      <td><%= link_to "Edit", edit_policy_path(policy) %></td>
-      <td><%= link_to "Destroy", policy, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Show", user_policy_path %></td>
+      <td><%= link_to "Edit", edit_user_policy_path %></td>
+      <td><%= link_to "Destroy", user_policy, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Policy", new_policy_path %></p>
+<p><%= link_to "New Policy", new_user_policy_path %></p>

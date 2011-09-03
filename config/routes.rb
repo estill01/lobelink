@@ -1,8 +1,7 @@
 Frontdoor::Application.routes.draw do
  	resources :sessions
  	resources :users do
-		resources :policies
-		resources :goals
+		resources :policies 
 	end
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user

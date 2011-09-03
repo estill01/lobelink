@@ -10,8 +10,18 @@
   <body>
 		<nav id="system_nav">
 			<div id="nav_container">
-				<div id="logo">
-					<%= link_to("LobeLink", root_path) %>
+				<div id="nav_left_side">
+					<div id="logo">
+						<%= link_to("LobeLink", root_path) %>
+					</div>
+					<div id="new_policy">
+						<%= link_to("New Policy", current_user ? new_user_policy_path(current_user) : login_path) %>
+					</div>
+				</div>
+				<div id="nav_right_side">
+					<div id="logins">
+						<%= current_user ? link_to("Log out", logout_path) : link_to("Log in", login_path) %>
+					</div>
 				</div>
 			</div>
 		</nav>

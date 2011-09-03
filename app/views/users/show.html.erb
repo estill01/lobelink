@@ -1,2 +1,9 @@
 <h1><%= @user.username %></h1>
 <%= render :partial => "user_info", :object => @user, :as => :user %>
+
+<h2>Policies</h2>
+<% @user.policies.each do |policy| %>
+	<h3><%= policy.position %></h3>
+	<%= policy.topic %>
+	<%= policy.explanation %>
+<% end %>

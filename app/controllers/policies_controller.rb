@@ -1,4 +1,6 @@
 class PoliciesController < ApplicationController
+	respond_to :html, :json
+
   def index
     @policies = Policy.all
   end
@@ -8,11 +10,14 @@ class PoliciesController < ApplicationController
   end
 
   def new
-    @policy = Policy.new
+		@user = User.find(params[:user_id])
+		@policy = @user.policies.build
+		respond_with(@policy)
   end
 
   def create
-    @policy = Policy.new(params[:policy])
+		@user = User.find(params[:user_id])
+		@policy = @user.policies.build(params[:policy])
     if @policy.save
       redirect_to @policy, :notice => "Successfully created policy."
     else

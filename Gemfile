@@ -8,7 +8,7 @@ gem 'thin'
 gem 'nifty-generators'
 gem 'gravtastic' 
 gem 'formtastic'
-gem 'pg', :group => [:production, :development, :test]
+gem 'pg', :require => 'pg'
 
 
 group :assets do

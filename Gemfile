@@ -1,13 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
-gem 'pg'
 gem 'heroku'
 gem 'taps'
 gem 'thin'
 gem 'nifty-generators'
 gem 'gravtastic' 
 gem 'formtastic'
+
+gem 'sqlite3', :group => [:development, :test]
+gem 'pg', :group => [:production]
+
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"

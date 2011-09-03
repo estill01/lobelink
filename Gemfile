@@ -8,7 +8,13 @@ gem 'thin'
 gem 'nifty-generators'
 gem 'gravtastic' 
 gem 'formtastic'
-gem 'pg', :require => 'pg'
+
+gem 'sqlite3-ruby', :require => 'sqlite3', :group => [:development, :test]
+
+group :production do
+	gem 'pg', :require => 'pg'
+end
+
 
 
 group :assets do

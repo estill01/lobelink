@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110904061158) do
+ActiveRecord::Schema.define(:version => 20110904082211) do
 
   create_table "goals", :force => true do |t|
     t.string    "objective"
@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(:version => 20110904061158) do
     t.timestamp "updated_at"
   end
 
+  create_table "issues", :force => true do |t|
+    t.string   "topic"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "policies", :force => true do |t|
     t.string   "position"
     t.text     "explanation"
@@ -28,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20110904061158) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "issue"
+    t.integer  "topic_id"
   end
 
   add_index "policies", ["user_id"], :name => "index_policies_on_user_id"

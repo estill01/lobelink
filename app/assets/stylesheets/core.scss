@@ -156,7 +156,7 @@ a {
   border-right: solid 1px #e0ae67;
 	min-height: 500px;
   margin-top: 20px;
-	@include background-image(url('bk_noise_2.png'), linear-gradient(bottom, #fff9f0, white 12%));
+	@include background-image(url('bk_noise_4.png'), linear-gradient(bottom, #fff9f0, white 12%));
 	@include box-shadow(0px -5px 5px 1px #f5e1cb);
 }
 

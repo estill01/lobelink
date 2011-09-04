@@ -6,7 +6,7 @@
 <% @user.policies.each do |policy| %>
 	<div class="user_policy">
 		<h3 class="policy_position"><%= policy.position %></h3>
-		<%= policy.topic %>
+		<p class="policy_timestamp">Posted <%= time_tag(policy.created_at) %> (<%= time_ago_in_words policy.created_at %> ago)</p>
 		<%= policy.explanation %>
 	</div>
 <% end %>

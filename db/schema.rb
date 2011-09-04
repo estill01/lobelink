@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110904001508) do
+ActiveRecord::Schema.define(:version => 20110904061158) do
 
   create_table "goals", :force => true do |t|
     t.string    "objective"
@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(:version => 20110904001508) do
   end
 
   create_table "policies", :force => true do |t|
-    t.string    "position"
-    t.text      "explanation"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "user_id"
-    t.string    "topic"
+    t.string   "position"
+    t.text     "explanation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "issue"
   end
 
   add_index "policies", ["user_id"], :name => "index_policies_on_user_id"

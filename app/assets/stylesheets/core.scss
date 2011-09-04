@@ -42,7 +42,21 @@ a {
 	padding: 0;
 	margin: 0;
 	z-index: 100;
-	@include background-image(linear-gradient(left, #964e14, #ffa500 33%));
+//	@include background-image(linear-gradient(left, #964e14, #ffa500 33%));
+
+	background: #964e14;
+	background-image: url(header_noise_copy.png); /* fallback */
+	background-image: url(header_noise_copy.png), -webkit-gradient(linear, left, right, from(#964e14), to(#ffa500) 33%); /* Saf4+, Chrome */
+	background-image: url(header_noise_copy.png), -webkit-linear-gradient(left, #964e14, #ffa500 33%); /* Chrome 10+, Saf5.1+ */
+	background-image:    url(header_noise_copy.png), -moz-linear-gradient(left, #964e14, #ffa500 33%); /* FF3.6+ */
+	background-image:     url(header_noise_copy.png), -ms-linear-gradient(left, #964e14, #ffa500 33%); /* IE10 */
+	background-image:      url(header_noise_copy.png), -o-linear-gradient(left, #964e14, #ffa500 33%); /* Opera 11.10+ */
+	background-image:         url(header_noise_copy.png), linear-gradient(left, #964e14, #ffa500 33%); /* W3C */
+
+
+
+
+
 	@include box-shadow(#4F3F33 0px 1px 1px);
 	border-bottom: 3px solid #964e14;
 
@@ -89,7 +103,7 @@ a {
 					text-shadow: 0px -1px 1px #4d3000;
 				}
 			}
-			#new_policy {
+			#new_policy, #highlight_issue {
 				float:left;
 				border-right: 2px solid #e39309;
 				border-left: 2px solid #e39309;

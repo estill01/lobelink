@@ -1,4 +1,6 @@
 Frontdoor::Application.routes.draw do
+  get "pages/home"
+
  	resources :sessions
  	resources :users do
 		resources :policies 

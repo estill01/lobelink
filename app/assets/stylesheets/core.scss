@@ -13,6 +13,7 @@ body {
 
 h1 {
 	text-shadow: -1px 1px 1px #7d7468;
+	font-size:28px;
 }
 
 a img {
@@ -115,6 +116,11 @@ a {
 					text-decoration: none;
 				}
 			}
+			#highlight_issue {
+				dd {
+					padding: 0 0 0 5px;
+				}
+			}
 		}
 
 		#nav_right_side {
@@ -150,7 +156,8 @@ a {
   border-right: solid 1px #e0ae67;
 	min-height: 500px;
   margin-top: 20px;
-	@include background-image(linear-gradient(bottom, #fff9f0, white 12%));
+	@include background-image(url('bk_noise.png'), linear-gradient(bottom, #fff9f0, white 12%));
+	@include box-shadow(0px -5px 5px 1px #f5e1cb);
 }
 
 #flash_notice, #flash_error, #flash_alert {

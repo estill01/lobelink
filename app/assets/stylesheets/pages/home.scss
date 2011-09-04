@@ -1,0 +1,43 @@
+#concept_overview {
+	margin: 20px 0 0 0;
+	text-align:center;
+	font-size:40px;
+	font-weight:bold;
+}
+
+#hot_issues {
+	display:block;
+	position:relative;
+	clear:both;
+	height: 340px;
+}
+#issue_container {
+	.hot_issue {
+		display: inline;
+		float: left;
+		padding: 0 10px 0 10px;
+		min-width: 286px;
+		min-height: 300px;
+		background-color:black;
+	}
+
+	#hot_issue_1 { 
+		padding: 0 10px 0 0;
+		border-right: 1px solid white;
+	}
+	#hot_issue_3 { 
+		padding: 0 0 0 10px;
+		border-left: 1px solid white;
+	}
+}
+
+#top_policy_makers {
+	h1 {
+		display: inline;
+		padding: 0 0 0 0;
+		margin: 0;
+	}
+	#view_all {
+	}
+}
+

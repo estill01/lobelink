@@ -1,2 +1,3 @@
 <h1>Policy Makers</h1>
+<%= logged_in? ? content_tag(:div, nil, :class => "spacer") : link_to("Join us!", signup_path, :id => "index_prompt") %>
 <%= render :partial => "user_info", :collection => @users, :as => :user %> 

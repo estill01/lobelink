@@ -11,13 +11,7 @@
   <p>
     <%= f.label :password %><br />
     <%= f.password_field :password %>
-		<small>All passwords encrypted <i>before</i> transmission.</small>
+		<small>All passwords encrypted before transmission.</small>
   </p>
-<!--
-	<p>
-   # <%= f.label :password_confirmation, "Confirm Password" %><br />
-   # <%= f.password_field :password_confirmation %>
-  </p>
--->
   <p><%= f.submit (@user.new_record? ? "Sign up" : "Update") %></p>
 <% end %>

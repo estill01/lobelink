@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<section id="concept_overview">
+	Community Powered Policy Creation
+</section>
+<section id="hot_issues">
+	<h1>Top Issues</h1>
+	<div id="issue_container">
+		<div id="hot_issue_1" class="hot_issue">
+		</div>
+		<div id="hot_issue_2" class="hot_issue">
+		</div>
+		<div id="hot_issue_3" class="hot_issue">
+		</div>
+	</div>
+</section>
+<br/>
+<section id="top_policy_makers">
+	<h1>Leading Policy Makers</h1> <%= link_to("view all →", users_path, :id => "view_all") %>	
+	<%= render :partial => "users/user_info", :collection => @users, :as => :user %> 
+</section>

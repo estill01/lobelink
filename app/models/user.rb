@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :policies
+	has_many :issues
 
 	include Gravtastic
 	gravtastic

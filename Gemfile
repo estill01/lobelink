@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
+gem 'sqlite3-ruby', :require => 'sqlite3', :group => [:development, :test]
 gem 'jquery-rails'
 gem 'heroku'
 gem 'taps'
@@ -8,8 +9,8 @@ gem 'thin'
 gem 'nifty-generators'
 gem 'gravtastic' 
 gem 'formtastic'
-
-gem 'sqlite3-ruby', :require => 'sqlite3', :group => [:development, :test]
+gem 'carrierwave'
+gem 'cancan'
 
 group :production do
 	gem 'pg', :require => 'pg'

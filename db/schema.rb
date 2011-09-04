@@ -11,32 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110903174912) do
+ActiveRecord::Schema.define(:version => 20110904001508) do
 
   create_table "goals", :force => true do |t|
-    t.string   "objective"
-    t.string   "explanation"
-    t.integer  "policy_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "objective"
+    t.string    "explanation"
+    t.integer   "policy_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "policies", :force => true do |t|
-    t.string   "position"
-    t.text     "explanation" 
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.string   "topic"
+    t.string    "position"
+    t.text      "explanation"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
+    t.string    "topic"
   end
 
+  add_index "policies", ["user_id"], :name => "index_policies_on_user_id"
+
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "username"
+    t.string    "email"
+    t.string    "password_hash"
+    t.string    "password_salt"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email"
 
 end

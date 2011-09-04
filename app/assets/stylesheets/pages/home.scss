@@ -3,6 +3,7 @@
 	text-align:center;
 	font-size:40px;
 	font-weight:bold;
+	text-shadow: 1px 1px 1px 1px white;
 }
 
 #hot_issues {
@@ -24,11 +25,29 @@
 	#hot_issue_1 { 
 		padding: 0 10px 0 0;
 		border-right: 1px solid white;
+		image {
+			display: inline;
+			float:left;
+			position: relative;
+		}
+		max-width:286px;
+	}
+	
+	#hot_issue_2 { 
+		max-width:286px;
 	}
 	#hot_issue_3 { 
 		padding: 0 0 0 10px;
 		border-left: 1px solid white;
+		max-width:286px;
+		overflow:hidden;
+		img { 
+			max-width:286px;
+			max-height: 300px;
+			overflow:hidden;
+		}
 	}
+	
 }
 
 #top_policy_makers {

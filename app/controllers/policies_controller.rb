@@ -8,6 +8,7 @@ class PoliciesController < ApplicationController
   end
 
   def show
+		@user = User.find(params[:user_id])
     @policy = Policy.find(params[:id])
   end
 
@@ -42,8 +43,9 @@ class PoliciesController < ApplicationController
   end
 
   def destroy
-    @policy = Policy.find(params[:id])
+		@user = current_user
+    @policy = @user.policies.find(params[:id])
     @policy.destroy
-    redirect_to policies_url, :notice => "Successfully destroyed policy."
+    redirect_to user_path(current_user), :notice => "Successfully destroyed policy."
   end
 end

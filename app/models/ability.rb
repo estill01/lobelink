@@ -2,15 +2,17 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-		can :read, User
+		can :read, :all
 		
 		if user.blank?
 			can :read, Policy
 		else
 			can :manage, User, :id => user.id
 			can :manage, Policy do |policy|
-
+				policy.user_id == user.id
 			end
+			can :create, Comment
+			can :read, Comment
 		end
 	end
 end

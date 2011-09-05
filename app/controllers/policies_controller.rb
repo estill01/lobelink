@@ -7,12 +7,7 @@ class PoliciesController < ApplicationController
     @policies = Policy.all
   end
 
-  def show
-		@user = User.find(params[:user_id])
-    @policy = Policy.find(params[:id])
-  end
-
-  def new
+ def new
 		@user = current_user
 		@policy = @user.policies.build
 		respond_with(@policy)
@@ -30,18 +25,24 @@ class PoliciesController < ApplicationController
 
   def edit
 		@user = current_user
-    @policy = Policy.find(params[:id])
+    @policy = @user.policies.find(params[:id])
   end
 
   def update
-    @policy = Policy.find(params[:id])
+		@user = current_user
+    @policy = @user.policies.find(params[:id])
     if @policy.update_attributes(params[:policy])
-      redirect_to @policy, :notice  => "Successfully updated policy."
+      redirect_to user_path(@user), :notice  => "Successfully updated policy."
     else
       render :action => 'edit'
     end
   end
 
+  def show
+		@user = User.find(params[:user_id])
+    @policy = Policy.find(params[:id])
+  end
+ 
   def destroy
 		@user = current_user
     @policy = @user.policies.find(params[:id])

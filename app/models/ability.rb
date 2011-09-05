@@ -3,7 +3,8 @@ class Ability
 
   def initialize(user)
 		can :read, :all
-		
+		can :create, User
+
 		if user.blank?
 			can :read, Policy
 		else

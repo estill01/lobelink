@@ -152,8 +152,8 @@ a {
 			}
 			#new_policy, #highlight_issue {
 				float:left;
-				border-right: 2px solid #e39309;
-				border-left: 2px solid #e39309;
+				border-right: 1px solid #e39309;
+				border-left: 1px solid #e39309;
 				width: auto;
 				height:100%;
 				text-shadow: 0px -1px 1px #d1861d;
@@ -163,8 +163,12 @@ a {
 				}
 			}
 			#highlight_issue {
+				border-left: 1px solid #bf7a04;
+				border-right: 1px solid #e09e2b;
+				//border-right: 1px solid #cc850a;
+
 				dd {
-					padding: 0 0 0 5px;
+					padding: 0 0 0 20px;
 				}
 			}
 		}
@@ -173,10 +177,11 @@ a {
 			display:inline;
 			position:relative;
 			float:left;
-			width: 50%;
+			width:50%;
 			height:100%;
 			text-align:right;
-			
+//			border-left: 1px solid #cc850a;
+
 			#logins {
 				margin: 15px 0 0 0;
 				a {

@@ -1,15 +1,7 @@
 <section class="user_listing" id="user_<%= user.id %>">
 
 	<div class="user_avatar" id="user_<%= user.id %>_avatar">
-		<% if can? :update, user %>
-			<%=
-				link_to_unless_current(link_to(image_tag(user.gravatar_url), edit_user_path(user)), user_path(user)) do
-					link_to(image_tag(user.gravatar_url), user_path(user))
-				end
-			%>
-		<% else %>
 			<%= link_to(image_tag(user.gravatar_url), user_path(user)) %>
-		<% end %>
 	</div>
 
 	<div class="user_details" id="user_<%= user.id %>_details">
@@ -29,8 +21,5 @@
 </section>
 
 
-<% if can? :update, user %>
-  <%= link_to "Edit", edit_user_path(user) %>
-<% end %>
 
 

@@ -34,11 +34,19 @@
 				</div>
 			</div>
 		</nav>
-    <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
+		<section id="flash">
+			<div id="flash_container">
+				<dl>
+					<dt>Civisense is an active work in progress.</dt>
+						<dd>Please send questions and feedback to ehs.stillman@gmail.com.</dd>
+				</dl>
+				<% flash.each do |name, msg| %>
+					<%= content_tag :div, msg, :id => "flash_#{name}" %>
+				<% end %>
+			</div>
+		</section>
+     <div id="container">
+     <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
   </body>

@@ -33,6 +33,50 @@ a {
 }
 
 /******************************
+ * FLASH
+ *****************************/
+#flash {
+	min-height: 70px;
+	width: 100%;
+	display:inline;
+	position:fixed;
+	z-index:99;
+	background-color:yellow;
+	background-image:url('stripes_clear.png'), -webkit-linear-gradient(left, #964e14, #ffa500 33%); /* Chrome 10+, Saf5.1+ */
+	border-bottom:2px solid #f7e40c;
+	border-bottom:2px solid #fcdc0a;
+	@include box-shadow(0px 1px 10px 1px grey);
+
+	#flash_container {
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 45px;
+		text-align:center;
+		text-shadow: 2px -2px 0px #fcf1cf;
+		dl {
+			margin: 0;
+			padding: 0 0 5px 0;
+		}
+		dt {
+			color: #e3dcca;
+			color:#4a4a4a;
+			color: #59564a;
+			font-size: 23px;
+			font-size:31px;
+			font-weight:bold;
+			margin: 0;
+			padding: 0;
+		}
+		dd {
+			color: #59564a;
+			font-size:18px;
+			margin: 0; 
+			padding: 0;
+		}
+	}
+}
+
+/******************************
  * NAV BAR
  *****************************/
 #system_nav {

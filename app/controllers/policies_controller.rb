@@ -1,5 +1,6 @@
 class PoliciesController < ApplicationController
 	respond_to :html, :json
+	authorize_resource
 
   def index
     @policies = Policy.all

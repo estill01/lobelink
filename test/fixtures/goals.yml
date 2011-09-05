@@ -1,9 +1,0 @@
-one:
-  objective: MyString
-  explanation: MyString
-  policy_id: 1
-
-two:
-  objective: MyString
-  explanation: MyString
-  policy_id: 1

@@ -23,7 +23,7 @@
 					<div id="highlight_issue">
 						<dl>
 							<dt><%= link_to("Submit a Concern", current_user ? new_user_policy_path(current_user) : login_path) %></dt>
-							<dd><%= link_to("seek our guidance", current_user ? new_user_policy_path(current_user) : login_path) %></dd>
+							<dd><%= link_to("focus our attention", current_user ? new_user_policy_path(current_user) : login_path) %></dd>
 						</dl>
 					</div>
 				</div>
@@ -34,19 +34,21 @@
 				</div>
 			</div>
 		</nav>
+		<% if request.fullpath == '/' %>
 		<section id="flash">
 			<div id="flash_container">
 				<dl>
 					<dt>Civisense is an active work in progress.</dt>
 						<dd>Please send questions and feedback to ehs.stillman@gmail.com.</dd>
 				</dl>
-				<% flash.each do |name, msg| %>
-					<%= content_tag :div, msg, :id => "flash_#{name}" %>
-				<% end %>
 			</div>
 		</section>
+		 <% end %>
      <div id="container">
-     <%= content_tag :h1, yield(:title) if show_title? %>
+			<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, :id => "flash_#{name}" %>
+			<% end %>
+    <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
   </body>

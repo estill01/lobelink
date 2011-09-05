@@ -1,10 +1,17 @@
 Frontdoor::Application.routes.draw do
+  resources :comments
+
   root :to => "pages#home"
   get "pages/home"
 
  	resources :sessions
  	resources :users do
-		resources :policies 
+		resources :policies do
+			resources :comments
+		end
+		resources :concerns do
+			resources :comments
+		end
 	end
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user

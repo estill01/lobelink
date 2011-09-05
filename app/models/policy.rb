@@ -1,6 +1,6 @@
 class Policy < ActiveRecord::Base
 	belongs_to :user
-	belongs_to :issue
+	has_many :comments, :as => :commentable
 
   attr_accessible :position, :explanation
 end

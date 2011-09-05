@@ -74,6 +74,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.12)
     multi_json (1.0.3)
     nifty-generators (0.4.6)
     pg (0.11.0)
@@ -156,6 +157,7 @@ DEPENDENCIES
   gravtastic
   heroku
   jquery-rails
+  mocha
   nifty-generators
   pg
   rails (= 3.1.0)

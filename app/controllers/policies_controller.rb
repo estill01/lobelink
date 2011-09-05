@@ -1,6 +1,6 @@
 class PoliciesController < ApplicationController
 	respond_to :html, :json
-	authorize_resource :user
+	authorize_resource :user, :through => :policy
 	authorize_resource :policy
 
   def index
@@ -12,22 +12,23 @@ class PoliciesController < ApplicationController
   end
 
   def new
-		@user = User.find(params[:user_id])
+		@user = current_user
 		@policy = @user.policies.build
 		respond_with(@policy)
   end
 
   def create
-		@user = User.find(params[:user_id])
+		@user = current_user
 		@policy = @user.policies.build(params[:policy])
     if @policy.save
       redirect_to @user, :notice => "Successfully created policy."
     else
-      render :action => 'new'
+      redirect_to root_path, :error => "Something went wrong. Please try again."
     end
   end
 
   def edit
+		@user = current_user
     @policy = Policy.find(params[:id])
   end
 

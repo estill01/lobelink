@@ -11,17 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110904082211) do
+ActiveRecord::Schema.define(:version => 20110905021244) do
 
-  create_table "goals", :force => true do |t|
-    t.string    "objective"
-    t.string    "explanation"
-    t.integer   "policy_id"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+  create_table "comments", :force => true do |t|
+    t.text     "body"
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  create_table "issues", :force => true do |t|
+  create_table "concerns", :force => true do |t|
     t.string   "topic"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -29,12 +29,11 @@ ActiveRecord::Schema.define(:version => 20110904082211) do
 
   create_table "policies", :force => true do |t|
     t.string   "position"
-    t.text     "explanation"
+    t.text     "explanation", :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "issue"
-    t.integer  "topic_id"
   end
 
   add_index "policies", ["user_id"], :name => "index_policies_on_user_id"

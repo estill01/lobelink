@@ -36,10 +36,9 @@ a {
  * FLASH
  *****************************/
 #flash {
-	min-height: 70px;
+	height: 70px;
 	width: 100%;
 	display:inline;
-	position:fixed;
 	z-index:99;
 	background-color:yellow;
 	background-image:url('stripes_clear.png'), -webkit-linear-gradient(left, #964e14, #ffa500 33%); /* Chrome 10+, Saf5.1+ */
@@ -99,10 +98,6 @@ a {
 	background-image:     url(header_noise_copy.png), -ms-linear-gradient(left, #964e14, #ffa500 33%); /* IE10 */
 	background-image:      url(header_noise_copy.png), -o-linear-gradient(left, #964e14, #ffa500 33%); /* Opera 11.10+ */
 	background-image:         url(header_noise_copy.png), linear-gradient(left, #964e14, #ffa500 33%); /* W3C */
-
-
-
-
 
 	@include box-shadow(#4F3F33 0px 1px 1px);
 	border-bottom: 3px solid #964e14;
@@ -168,7 +163,7 @@ a {
 				//border-right: 1px solid #cc850a;
 
 				dd {
-					padding: 0 0 0 20px;
+					padding: 0 0 0 18px;
 				}
 			}
 		}

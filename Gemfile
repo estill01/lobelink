@@ -11,8 +11,8 @@ gem 'gravtastic'
 gem 'formtastic'
 gem 'carrierwave'
 gem 'cancan'		# maybe get rid of this
-# gem 'inherited_resources'
-# gem 'has_scope'
+ 
+
 
 group :production do
 	gem 'pg', :require => 'pg'

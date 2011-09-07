@@ -36,11 +36,11 @@ a {
  * FLASH
  *****************************/
 #flash {
-	min-height: 70px;
+//	min-height: 70px;
 	width: 100%;
 	display:inline;
-	position:fixed;
-	z-index:99;
+//	position:fixed;
+//	z-index:99;
 	background-color:yellow;
 	background-image:url('stripes_clear.png'), -webkit-linear-gradient(left, #964e14, #ffa500 33%); /* Chrome 10+, Saf5.1+ */
 	border-bottom:2px solid #f7e40c;

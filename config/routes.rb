@@ -1,4 +1,8 @@
 Frontdoor::Application.routes.draw do
+  match 'signup' => 'users#new', :as => :signup
+  match 'logout' => 'sessions#destroy', :as => :logout
+  match 'login' => 'sessions#new', :as => :login
+
   resources :comments
 
   root :to => "pages#home"
@@ -7,8 +11,9 @@ Frontdoor::Application.routes.draw do
 	match 'users/:id/policies' => 'users#show'
 
  	resources :sessions
- 	resources :users do
-		resources :policies do
+	resources :users, :path => ''
+ 	resources :users, :path => '', :only => [] do
+		resources :policies, :path => '' do
 			resources :comments
 		end
 		resources :concerns do
@@ -17,10 +22,6 @@ Frontdoor::Application.routes.draw do
 	end
 
   match 'user/edit' => 'users#edit', :as => :edit_current_user
-  match 'signup' => 'users#new', :as => :signup
-  match 'logout' => 'sessions#destroy', :as => :logout
-  match 'login' => 'sessions#new', :as => :login
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

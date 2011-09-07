@@ -56,6 +56,7 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    friendly_id (4.0.0.beta10)
     gravtastic (3.2.6)
     heroku (2.6.1)
       launchy (>= 0.3.2)
@@ -154,6 +155,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.1.0)
   formtastic
+  friendly_id (~> 4.0.0.beta8)
   gravtastic
   heroku
   jquery-rails

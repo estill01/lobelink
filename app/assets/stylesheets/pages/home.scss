@@ -1,9 +1,27 @@
+
 #concept_overview {
-	margin: 20px 0 0 0;
+	margin: 5px 0 10px 0;
 	text-align:center;
-	font-size:40px;
-	font-weight:bold;
+	font-size:30px;
 	text-shadow: 1px 1px 1px 1px white;
+	#home_logo {
+		font-weight:bold;
+		font-size: 50px;
+		margin:0;
+		padding:0;
+		vertical-align: top;
+		line-height: 38px;
+		color:#381F03;
+		color: slate;
+		text-shadow: 0px -1px 1px #404040;
+	}
+	#home_tag {
+		margin:0;
+		padding:0;
+		font-size: 16px;
+		color: #696561;
+		text-shadow: 0px -1px 1px white;
+	}
 }
 
 #hot_issues {

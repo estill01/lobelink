@@ -1,80 +1,150 @@
+// HOME PAGE 
 
+@import "bourbon";
+
+/************************
+//
+// Logo Area 
+//
+************************/
 #concept_overview {
-	margin: 5px 0 10px 0;
-	text-align:center;
+	display: block;
+	position: relative; 
+	height: 60px;
+	margin: 0 auto;
+	clear:both;
 	font-size:30px;
 	text-shadow: 1px 1px 1px 1px white;
-	#home_logo {
-		font-weight:bold;
-		font-size: 50px;
-		margin:0;
-		padding:0;
-		vertical-align: top;
-		line-height: 38px;
-		color:#381F03;
-		color: slate;
-		text-shadow: 0px -1px 1px #404040;
-	}
-	#home_tag {
-		margin:0;
-		padding:0;
-		font-size: 16px;
-		color: #696561;
-		text-shadow: 0px -1px 1px white;
-	}
-}
 
-#hot_issues {
-	display:block;
-	position:relative;
-	clear:both;
-	height: 340px;
-}
-#issue_container {
-	.hot_issue {
-		display: inline;
-		float: left;
-		padding: 0 10px 0 10px;
-		min-width: 286px;
-		min-height: 300px;
-		background-color:black;
-	}
+	#logo_container {
+		text-align:center;
+		height: auto;
+		margin: 0 auto;	
 
-	#hot_issue_1 { 
-		padding: 0 10px 0 0;
-		border-right: 1px solid white;
-		image {
+		.cartouche {
 			display: inline;
-			float:left;
+			float: left;
+			position: relative;
+			text-align: center;
+			margin: 10px auto 0px auto;
+		}
+		
+		#cartouche_left {
+			margin: 15px auto 0px 240px;
+			padding: 0 3px 0 0;
+		}
+		
+		#cartouche_right {
+			margin: 15px 0 0 -2px;
+		}
+		
+		#logo_lander {
+			display: inline;
+			float: left;
 			position: relative;
 		}
-		max-width:286px;
-	}
-	
-	#hot_issue_2 { 
-		max-width:286px;
-	}
-	#hot_issue_3 { 
-		padding: 0 0 0 10px;
-		border-left: 1px solid white;
-		max-width:286px;
-		overflow:hidden;
-		img { 
-			max-width:286px;
-			max-height: 300px;
-			overflow:hidden;
+		
+		#home_logo {
+			font-weight:bold;
+			font-size: 50px;
+			margin:0;
+			padding:0;
+			vertical-align: top;
+			line-height: 38px;
+			color:#381F03;
+			color: slate;
+			text-shadow: 0px -1px 1px #404040;
+		}
+		
+		#home_tag {
+			margin:0;
+			padding:0;
+			font-size: 16px;
+			color: #696561;
+			color: #5c5854;
+			color: #4d4844;
+			color: #403a36;
+			text-shadow: 0px -1px 1px white;
 		}
 	}
-	
 }
 
-#top_policy_makers {
-	h1 {
-		display: inline;
-		padding: 0 0 0 0;
-		margin: 0;
-	}
-	#view_all {
-	}
+/************************
+//
+// Main Form 
+//
+************************/
+#lander_form {
+	clear:both;
+	display:block;
+	position:relative;
+	margin: 15px 0px 0px 0px;
+	width: 100%;
+	height: 210px;
+	background-color: lightskyblue;
+	@include border-radius(20px);
+	border: 1px solid white;
+	@include box-shadow(0px 0px 4px 3px #cccac2);
 }
 
+/************************
+//
+// Lander Content 
+//
+************************/
+#content_overview {
+
+	#hot_issues {
+		display:block;
+		position:relative;
+		clear:both;
+		height: 340px;
+	}
+	#issue_container {
+		.hot_issue {
+			display: inline;
+			float: left;
+			padding: 0 10px 0 10px;
+			min-width: 286px;
+			min-height: 300px;
+			background-color:black;
+		}
+
+		#hot_issue_1 { 
+			padding: 0 10px 0 0;
+			border-right: 1px solid white;
+			image {
+				display: inline;
+				float:left;
+				position: relative;
+			}
+			max-width:286px;
+		}
+		
+		#hot_issue_2 { 
+			max-width:286px;
+		}
+		#hot_issue_3 { 
+			padding: 0 0 0 10px;
+			border-left: 1px solid white;
+			max-width:286px;
+			overflow:hidden;
+			img { 
+				max-width:286px;
+				max-height: 300px;
+				overflow:hidden;
+			}
+		}
+		
+	}
+
+	#top_policy_makers {
+		h1 {
+			display: inline;
+			padding: 0 0 0 0;
+			margin: 0;
+		}
+		#view_all {
+		}
+	}
+}

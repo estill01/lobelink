@@ -1,9 +1,26 @@
 
-Change Policies Explanation data type from :string to :text
-	:string has a 255 char limit
-	Made a migration, but seems to not work
+DESIGN
+	shrink down the top issues
+		nearly thumb-nail size?
+		grid
 
-Local db is totally fucked
+	put an input area above issue
+		want to toss people right into the action
+
+	maybe put Top Policy Makers and Top Issues blocks side by side
+
+	put some frilly document emboss type assets around the logo on the landing page
 
 
+FEATURES
+	Agree/Disagree buttons on each policy
 
+ACCOUNTS
+	password recovery
+	email verification
+		i.e. send the email with a link and such
+
+USABILITY
+	each policy should have a unique url
+
+	Get CarrierWave going to do the image resizes

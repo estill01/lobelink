@@ -6,15 +6,14 @@ gem 'jquery-rails'
 gem 'heroku'
 gem 'taps'
 gem 'thin'
-gem 'nifty-generators'
-gem 'gravtastic' 
-gem 'formtastic'
-gem 'carrierwave'
-gem 'cancan'		# maybe get rid of this
-gem 'friendly_id', "~> 4.0.0.beta8"
+gem 'nifty-generators'														# slightly souped up generators
+gem 'gravtastic'																	# user gravatar.com avatars for new users
+gem 'formtastic'																	# form builder abstraction
 
-# gem 'inherited_resources'
-# gem 'has_scope'
+gem 'carrierwave'																	# image handling/uploading
+gem 'cancan'																			# restrict access based on user type. could be useful for non-signed in 'guest' users
+gem 'friendly_id', "~> 4.0.0.beta8"								# descriptive urls, i.e., civisense.com/estill01 vs. civisense.com/users/
+# gem 'inherited_resources'												# auto does controller logic for nested resources. also centralizes flash content in locales/
 
 group :production do
 	gem 'pg', :require => 'pg'

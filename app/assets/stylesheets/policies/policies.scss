@@ -48,3 +48,27 @@
 	font-style:italic;
 	color: #5e5e5e;
 }
+
+
+.user_policy {
+	padding: 5px;
+
+	.policy_issue {
+		margin: 0;
+		color: #696969;
+		font-weight: normal;
+		font-size: 16px;
+	}
+	.policy_position {
+		margin: 0;
+		font-size:16px;
+	}
+	.policy_explanation {
+		margin: 0;
+	}
+	.policy_timestamp {
+		color: #b3a89d;
+	}
+	
+
+}

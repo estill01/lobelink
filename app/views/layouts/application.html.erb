@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "LobeLink" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Civisense" %></title>
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
@@ -22,8 +22,8 @@
 					</div>
 					<div id="highlight_issue">
 						<dl>
-							<dt><%= link_to("Submit a Concern", current_user ? new_user_policy_path(current_user) : login_path) %></dt>
-							<dd><%= link_to("focus attention", current_user ? new_user_policy_path(current_user) : login_path) %></dd>
+							<dt><%= link_to("Submit an Issue", current_user ? new_user_policy_path(current_user) : login_path) %></dt>
+							<dd><%= link_to("raise awareness", current_user ? new_user_policy_path(current_user) : login_path) %></dd>
 						</dl>
 					</div>
 				</div>

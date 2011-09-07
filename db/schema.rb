@@ -11,29 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110905021244) do
+ActiveRecord::Schema.define(:version => 20110905025627) do
 
   create_table "comments", :force => true do |t|
-    t.text     "body"
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text      "content"
+    t.integer   "commentable_id"
+    t.string    "commentable_type"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "concerns", :force => true do |t|
-    t.string   "topic"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "topic"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "policies", :force => true do |t|
-    t.string   "position"
-    t.text     "explanation", :limit => 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.string   "issue"
+    t.string    "position"
+    t.text      "explanation"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
+    t.string    "issue"
   end
 
   add_index "policies", ["user_id"], :name => "index_policies_on_user_id"

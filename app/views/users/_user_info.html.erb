@@ -1,7 +1,7 @@
 <section class="user_listing" id="user_<%= user.id %>">
 
 	<div class="user_avatar" id="user_<%= user.id %>_avatar">
-			<%= link_to(image_tag(user.gravatar_url), user_path(user)) %>
+			<div id="avatar_container"><%= link_to(image_tag(user.gravatar_url), user_path(user)) %></div>
 	</div>
 
 	<div class="user_details" id="user_<%= user.id %>_details">

@@ -7,7 +7,7 @@ class PoliciesController < ApplicationController
     @policies = Policy.all
   end
 
- def new
+  def new
 		@user = current_user
 		@policy = @user.policies.build
 		respond_with(@policy)

@@ -11,8 +11,10 @@ gem 'gravtastic'
 gem 'formtastic'
 gem 'carrierwave'
 gem 'cancan'		# maybe get rid of this
- 
+gem 'friendly_id', "~> 4.0.0.beta8"
 
+# gem 'inherited_resources'
+# gem 'has_scope'
 
 group :production do
 	gem 'pg', :require => 'pg'

@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
 	has_many :policies
 	has_many :concerns
 
+	extend FriendlyId
+	friendly_id :username, :use => :slugged
+
 	include Gravtastic
 	gravtastic
 

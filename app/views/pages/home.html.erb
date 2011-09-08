@@ -9,25 +9,25 @@
 	</div>
 </section>
 <section id="lander_form">
-	
+	<!-- New Policy/Issue form -->	
 </section>
 <section id="content_overview">
+	<section id="top_policy_makers">
+		<div id="featured_user">
+			<%= render :partial => 'users/user_info', :object =>  @users.first, :as => :user  %>
+		</div>
+		<%= render :partial => 'home_top_users_table' %>
+	</section>
 	<section id="hot_issues">
-		<h1>Top Issues</h1>
 		<div id="issue_container">
-			<div id="hot_issue_1" class="hot_issue">
-				<%= image_tag("issues/code_literacy.png") %>
-			</div>
-			<div id="hot_issue_2" class="hot_issue">
 				<%= image_tag("issues/libya.jpeg") %>
-			</div>
-			<div id="hot_issue_3" class="hot_issue">
-				<%= image_tag("issues/privacy.jpg") %>
-			</div>
 		</div>
 	</section>
-	<section id="top_policy_makers">
-		<h1>Leading Policy Makers</h1> <%= link_to("view all →", users_path, :id => "view_all") %>	
-		<%= render :partial => "users/user_info", :collection => @users, :as => :user %> 
-	</section>
 </section>
+
+<!--		<h1>Leading Policy Makers</h1> <%= link_to("view all →", users_path, :id => "view_all") %>	-->
+<!--		<h1>Top Issues</h1> -->
+				<!-- 
+				<%= image_tag("issues/code_literacy.png") %>
+				<%= image_tag("issues/privacy.jpg") %>
+				-->

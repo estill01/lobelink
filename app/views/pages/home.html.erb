@@ -8,15 +8,20 @@
 		<%= image_tag('cartouche/cart4rt.png', :id => 'cartouche_right', :class => 'cartouche') %>
 	</div>
 </section>
-<section id="lander_form">
-	<!-- New Policy/Issue form -->	
+<section id="lander_input_area">
+	<nav id="lander_input_nav">
+		Plan | Policy | Issue 
+	</nav>
+	<div id="form_container">
+		<%= render :partial => 'lander_form' %>
+	</div>
 </section>
 <section id="content_overview">
 	<section id="top_policy_makers">
 		<div id="featured_user">
 			<%= render :partial => 'users/user_info', :object =>  @users.first, :as => :user  %>
 		</div>
-		<%= render :partial => 'home_top_users_table' %>
+		<%= render :partial => 'home_top_users' %>
 	</section>
 	<section id="hot_issues">
 		<div id="issue_container">

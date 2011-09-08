@@ -1,0 +1,12 @@
+<table id="policy_makers_avatars">
+	<tr>
+		<% @users.order(:policies_count).reverse_order.limit(6).each do |user| %>
+			<%= content_tag('td', link_to(image_tag(user.gravatar_url, :height => "80%"), user_path(user)) ) %>
+		<% end %>
+	</tr>
+	<tr>
+		<% @users.order(:policies_count).limit(6).each do |user| %>
+			<%= content_tag('td', link_to(image_tag(user.gravatar_url, :height => "80%"), user_path(user)) ) %>
+		<% end %>
+	</tr>
+</table>

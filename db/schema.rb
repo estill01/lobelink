@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110907075748) do
+ActiveRecord::Schema.define(:version => 20110908014908) do
 
   create_table "comments", :force => true do |t|
     t.text      "content"
@@ -25,41 +25,44 @@ ActiveRecord::Schema.define(:version => 20110907075748) do
     t.string    "topic"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.integer   "user_id"
   end
 
   create_table "policies", :force => true do |t|
-   t.string   "position"
-    t.text     "explanation"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.string   "issue"
-    t.string   "slug"
+    t.string    "position"
+    t.text      "explanation"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
+    t.string    "issue"
+    t.string    "slug"
   end
 
   add_index "policies", ["user_id", "slug"], :name => "index_policies_on_user_id_and_cached_slug", :unique => true
   add_index "policies", ["user_id"], :name => "index_policies_on_user_id"
 
   create_table "slugs", :force => true do |t|
-    t.string   "name"
-    t.integer  "sluggable_id"
-    t.integer  "sequence",                     :default => 1, :null => false
-    t.string   "sluggable_type", :limit => 40
-    t.string   "scope"
-    t.datetime "created_at"
+    t.string    "name"
+    t.integer   "sluggable_id"
+    t.integer   "sequence",                     :default => 1, :null => false
+    t.string    "sluggable_type", :limit => 40
+    t.string    "scope"
+    t.timestamp "created_at"
   end
 
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
   create_table "users", :force => true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "slug"
+    t.string    "username"
+    t.string    "email"
+    t.string    "password_hash"
+    t.string    "password_salt"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "slug"
+    t.integer   "policies_count", :default => 0
+    t.integer   "concerns_count", :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

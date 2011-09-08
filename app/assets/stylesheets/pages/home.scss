@@ -102,26 +102,26 @@
 	// MAIN SECTION
 	display:block;
 	position: relative;
+	width: $page_width - 10px;
+	height: 255px;
 	clear: both;
-	min-height: 300px;
-	min-width: $page_width;
-	backgkground-color:black;
+	padding: 5px;
+	background-color:black;
+	
+	#featured_user {
+		background-color: white;
+	}
 
 	#top_policy_makers {
 		// MAIN SECTION
 		display: inline;
 		position: relative;
-		width: 45%;
+		width: 50%;
 		float:left;
-
 		h1 {
 			display: inline;
 			padding: 0 0 0 0;
 			margin: 0;
-		}
-		
-		#view_all {
-
 		}
 	} // END: 'top_poliyc_makers'
 	
@@ -129,44 +129,12 @@
 		// MAIN SECTION
 		display:inline;
 		position:relative;
-		widht: 45%;
+		width: 50%;
+		height:100%;
 		float: left;
-		background-color: red;
 		
 		#issue_container {
-			.hot_issue {
-				display: inline;
-				float: left;
-				padding: 0 10px 0 10px;
-				min-height: 30px;
-				background-color:black;
-			}
-
-			#hot_issue_1 { 
-				padding: 0 10px 0 0;
-				border-right: 1px solid white;
-				image {
-					display: inline;
-					float:left;
-					position: relative;
-				}
-				max-width:286px;
-			}
-			
-			#hot_issue_2 { 
-				max-width:286px;
-			}
-			#hot_issue_3 { 
-				padding: 0 0 0 10px;
-				border-left: 1px solid white;
-				max-width:286px;
-				overflow:hidden;
-				img { 
-					max-width:286px;
-					max-height: 300px;
-					overflow:hidden;
-				}
-			}
+			text-align:center;
 		}
 	} // END: 'hot_issues'
 } // END: 'content_overview'

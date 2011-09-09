@@ -30,6 +30,13 @@ class User < ActiveRecord::Base
     BCrypt::Engine.hash_secret(pass, password_salt)
   end
 
+	def latest_policy
+		if self.policies == nil
+		else
+			self.policies.find(:first, :order => "created_at DESC")
+		end
+	end
+
   private
 
   def prepare_password
@@ -38,4 +45,6 @@ class User < ActiveRecord::Base
       self.password_hash = encrypt_password(password)
     end
   end
+
+
 end

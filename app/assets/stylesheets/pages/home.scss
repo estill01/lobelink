@@ -107,25 +107,34 @@
 
 	#form_container {
 		margin: 0 auto;
-		padding: 10px 0;
+		padding: 20px 0 0 0;
 		text-align: center;
-		
-		label {
-			font-size: 14px;	
-		}
 
 		input {
 			font-size: 18px;
 			width: 500px;
-			border:1px solid orange;
+			border:1px solid lightskyblue;
 			padding: 5px;
 			text-align:center;
 		}
+		.home_form_issue {
+			@include border-radius(10px 10px 0 0);
+			
+		}
+
+		button {
+			width: 150px;
+			font-size: 18px;
+			padding: 5px 0; 
+		}
+
 		textarea {
 			width: 500px;
 			height: 50px;
-			border: 1px solid orange;
+			border: 1px solid lightskyblue;
+			@include border-radius(0 0 10px 10px);
 			padding: 5px;
+			margin: 0px 0px 5px 0px;
 			font-size: 18px;
 			resize:none;
 
@@ -147,7 +156,7 @@
 	height: 255px;
 	clear: both;
 	padding: 5px;
-	background-color:black;
+	background-color:white;
 	
 	#featured_user {
 		background-color: white;

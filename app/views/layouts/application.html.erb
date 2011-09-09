@@ -10,7 +10,30 @@
   </head>
   <body>
 		<nav id="system_nav">
-				<%= render :partial => 'layouts/nav_main' %>
+			<div id="nav_container">
+				<div id="nav_left_side">
+					<div id="logo" class="logo">
+						<%= link_to("Civisense", root_path) %>
+					</div>
+					<div id="new_policy">
+						<dl>
+							<dt><%= link_to("Make a Policy", current_user ? new_user_policy_path(current_user) : login_path) %></dt>
+							<dd><%= link_to("lead the way", current_user ? new_user_policy_path(current_user) : login_path) %></dd>
+						</dl>
+					</div>
+					<div id="highlight_issue">
+						<dl>
+							<dt><%= link_to("Submit an Issue", current_user ? new_user_policy_path(current_user) : login_path) %></dt>
+							<dd><%= link_to("raise awareness", current_user ? new_user_policy_path(current_user) : login_path) %></dd>
+						</dl>
+					</div>
+				</div>
+				<div id="nav_right_side">
+					<div id="logins">
+						<%= current_user ? link_to("Log out", logout_path) : link_to("Log in", login_path) %>
+					</div>
+				</div>
+			</div>	
 		</nav>
 		<div id="flash">
 			<div id="flash_container">
@@ -23,5 +46,8 @@
     	<%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </section>
+		<footer>
+			Civisense
+		</footer>
   </body>
 </html>

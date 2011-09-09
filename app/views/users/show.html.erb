@@ -1,17 +1,21 @@
-<h1 id="profile_username"><%= @user.username.capitalize %></h1>
-<%= link_to("← back", root_path) %>
+<header id= "profile_header">
+	<h1 id="profile_username"><%= @user.username.capitalize %></h1>
+	<%= link_to("← back", root_path) %>
+</header>
 <%= render :partial => "user_info", :object => @user, :as => :user %>
 
-<h2>Policies</h2>
-<section id="policies_container">
-	<% @user.policies.each do |policy| %>
-		<div class="user_policy">
-			<% unless policy.issue.blank? %>
-			<h3 class="policy_issue">On: <%= policy.issue %></h3>
-			<% end %>
-			<h4 class="policy_position"><%= policy.position %></h4>
-			<p class="policy_explanation"><%= policy.explanation %></p>
-			<p class="policy_timestamp">Posted <%= time_tag(policy.created_at) %> (<%= time_ago_in_words policy.created_at %> ago)</p>
-		</div>
-	<% end %>
+<section id="profile_policies">
+	<h2>Policies</h2>
+	<div id="policies_container" class="content_container">
+		<% @user.policies.each do |policy| %>
+			<div class="user_policy">
+				<% unless policy.issue.blank? %>
+				<h3 class="policy_issue">On: <%= policy.issue %></h3>
+				<% end %>
+				<h4 class="policy_position"><%= policy.position %></h4>
+				<p class="policy_explanation"><%= policy.explanation %></p>
+				<p class="policy_timestamp">Posted <%= time_tag(policy.created_at) %> (<%= time_ago_in_words policy.created_at %> ago)</p>
+			</div>
+		<% end %>
+	</div>
 </section>

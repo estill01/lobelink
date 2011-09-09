@@ -1,1 +1,28 @@
+@import 'bourbon';
 $page_width: 900px;
+
+.content_container {
+	display:block;
+	position: relative;
+	width: $page_width - 30px;
+	height: auto;
+	clear: both;
+	padding: 5px 5px 10px 5px;
+	margin: 10px auto 0 auto;
+	@include border-radius(10px);
+	background-color: #F2FAF4;
+	background-color: #F2FCF6;
+	background-color: white;
+	border: 1px solid #E0DED5;
+	border: 1px solid #DED3C1;
+	border: 1px solid #F2ECE1;
+	@include box-shadow(0px 0px 1px 0px #506C75);
+
+	h3 {
+		color: #36332E;	
+		color: #575757;
+		color: #8F8F8F;
+	}
+}
+
+

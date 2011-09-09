@@ -1,5 +1,9 @@
 @import 'bourbon';
 
+#profile_header {
+	padding: 0 0 8px 0;
+}
+
 .user_listing {
 	a {
 		display:inline;
@@ -37,4 +41,7 @@ a {
 
 #policies_container {
 	background-color: white;
+	@include border-radius(10px);
+	padding: 10px;
 }
+

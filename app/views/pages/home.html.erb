@@ -9,28 +9,22 @@
 	</div>
 </section>
 <section id="lander_input_area">
-<!--	<nav id="lander_input_nav">
-		<div id="lander_nav_container">
-		</div>
-	</nav> -->
 	<div id="form_container">
 		<%= render :partial => 'lander_form' %>
 	</div>
 </section>
 
 <section id="content_overview">
-	<section id="top_policy_makers">
-		<div id="featured_user">
-		<h3>New Policies</h3>
-			<%= render :partial => 'users/user_info', :collection =>  newest_policies, :as => :user  %>
+		<div id="overview_container">
+			<div id="latest_policies">
+				<h3>Latest Policies</h3>
+				<%= render :partial => 'users/user_info', :collection =>  newest_policies, :as => :user  %>
+			</div>
+			<div id="top_policy_makers">
+				<h3>Top Policy Makers</h3>
+				<%= render :partial => 'home_top_users' %>
+			</div>
 		</div>
-	</section>
-	<section id="hot_issues">
-		<div id="issue_container">
-		<h3>Top Policy Makers</h3>
-		<%= render :partial => 'home_top_users' %>
-		</div>
-	</section>
 </section>
 
 <!--		<h1>Leading Policy Makers</h1> <%= link_to("view all →", users_path, :id => "view_all") %>	-->

@@ -1,7 +1,8 @@
 <section class="user_listing" id="user_<%= user.id %>">
-
 	<div class="user_avatar" id="user_<%= user.id %>_avatar">
-			<div id="avatar_container"><%= link_to(image_tag(user.gravatar_url), user_path(user)) %></div>
+			<div id="avatar_container">
+				<%= link_to(image_tag(user.gravatar_url), user_path(user)) %>
+			</div>
 	</div>
 
 	<div class="user_details" id="user_<%= user.id %>_details">
@@ -15,12 +16,7 @@
 					<%= link_to(truncate(explanation_blurb, :length => 120), user_path(user)) %>
 			</p>
 		</header>
-		<div class="details_body">
-
 		</div>
-		<footer class="details_footer">
-		</footer>
-	</div>
 </section>
 
 

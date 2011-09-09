@@ -7,7 +7,7 @@
 	<% @user.policies.each do |policy| %>
 		<div class="user_policy">
 			<% unless policy.issue.blank? %>
-			<h3 class="policy_issue"><%= policy.issue %>:</h3>
+			<h3 class="policy_issue">On: <%= policy.issue %></h3>
 			<% end %>
 			<h4 class="policy_position"><%= policy.position %></h4>
 			<p class="policy_explanation"><%= policy.explanation %></p>

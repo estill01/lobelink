@@ -115,7 +115,6 @@
 			width: 500px;
 			border:1px solid lightskyblue;
 			padding: 5px;
-			text-align:center;
 		}
 		.home_form_issue {
 			@include border-radius(10px 10px 0 0);
@@ -152,40 +151,36 @@
 	// MAIN SECTION
 	display:block;
 	position: relative;
-	width: $page_width - 10px;
-	height: 255px;
+	width: $page_width - 50px;
+	height: auto;
 	clear: both;
 	padding: 5px;
-	margin: 20px 0 0 0;
+	margin: 10px auto 0 auto;
 	background-color:white;
-	
-	#featured_user {
-		background-color: white;
+	@include box-shadow(0px 0px 5px 3px white);
+	@include border-radius(5px);
+
+	h3 {
+		color: #36332E;	
+		color: #575757;
+		color: #8F8F8F;
 	}
 
-	#top_policy_makers {
-		// MAIN SECTION
-		display: inline;
-		position: relative;
-		width: 50%;
-		float:left;
-		h1 {
-			display: inline;
-			padding: 0 0 0 0;
-			margin: 0;
+	#overview_container {
+		width: $page_width * .55;
+		height: auto;
+		margin: 0 auto;
+		padding: 0 0 10px 0;
+
+		#top_policy_makers {
+			display: block;
+			position: relative;
+			h1 {
+				display: inline;
+				padding: 0 0 0 0;
+				margin: 0;
+			}
 		}
-	} // END: 'top_poliyc_makers'
-	
-	#hot_issues {
-		// MAIN SECTION
-		display:inline;
-		position:relative;
-		width: 50%;
-		height:100%;
-		float: left;
-		
-		#issue_container {
-			text-align:center;
-		}
-	} // END: 'hot_issues'
-} // END: 'content_overview'
+
+	}
+}

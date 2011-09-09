@@ -31,7 +31,7 @@
 		}
 		
 		#cartouche_left {
-			margin: 15px auto 0px 240px;
+			margin: 15px auto 0px 237px;
 			padding: 0 3px 0 0;
 		}
 		
@@ -82,7 +82,7 @@
 	clear:both;
 	width: 100%;
 	height: 210px;
-	margin: 15px 0px 20px 0px;
+	margin: 15px 0px 25px 0px;
 	background-color: #f0f6fa;
 	@include border-radius(20px);
 	border: 1px solid lightskyblue;
@@ -144,7 +144,7 @@
 
 /************************
 //
-// Lander Content 
+// Feed Area 
 //
 ************************/
 #content_overview {
@@ -158,6 +158,9 @@
 	margin: 10px auto 0 auto;
 	@include border-radius(10px);
 	background-color:white;
+	background-color: #F2FAF4;
+	background-color: #F2FCF6;
+	background-color: white;
 	border: 1px solid #E0DED5;
 	border: 1px solid #DED3C1;
 	border: 1px solid #F2ECE1;

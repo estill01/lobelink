@@ -200,12 +200,9 @@ a {
   margin: 0 auto;
   background-color: #FFF;
   padding: 30px 40px;
-// border-left: solid 1px #e0ae67;
-//  border-right: solid 1px #e0ae67;
 	min-height: 500px;
   margin-top: 20px;
 	@include background-image(url('bk_noise.png'), linear-gradient(bottom, #fff9f0, white 12%));
-//	@include box-shadow(0px -5px 5px 1px #f5e1cb);
 }
 
 #flash_notice, #flash_error, #flash_alert {
@@ -218,3 +215,33 @@ a {
  ****************************/
 // see: buttons.scss
 
+/*****************************
+ * FOOTER
+ ****************************/
+#system_footer {	
+	position:relative;
+	display:block;
+	width: 100%;
+	height: auto;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	background-color:white;
+	border-top: 1px solid orange;
+
+	#footer_container {
+		width: $page_width;
+		height: auto;
+		margin: 0 auto;
+		padding: 5px;
+
+		p {
+			margin: 0;
+			padding: 4px 15px 2px 20px;
+			color: #303030;
+			font-weight: bold;
+			text-shadow:0px -1px 1px #D6D6D6;
+			
+		}
+	}
+}

@@ -42,12 +42,14 @@
 			<% end %>	
 			</div>
 		</div>
-    <section id="container">
+  	 <div id="container">
     	<%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
-    </section>
-		<footer>
-			Civisense
+    </div>
+		<footer id="system_footer">
+			<div id="footer_container">
+				<p id="copyright"> © <%= Time.now.year %> Civisense</p>
+			</div>
 		</footer>
   </body>
 </html>

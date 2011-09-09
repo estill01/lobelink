@@ -24,3 +24,72 @@ USABILITY
 	each policy should have a unique url
 
 	Get CarrierWave going to do the image resizes
+
+----------
+
+Agree/Disagree with a Policy
+Monitor/Dismiss an Issues
+	get added to your profile
+
+----------
+*********************** RESUME HERE ***********************
+// I think I have to go polymorphic on these things.
+
+user :has_many policies, :through => :positions
+user :has_many issues, through => :monitor
+
+policy :belongs_to  user
+policy :belongs_to issue
+
+issue :has_many policies
+issue :has_many users, :through => :monitors
+	via the Monitoring functionality; the issue gets added to the monitoring user's list of issues
+		rename concern => issue, add a Monitors table {id, user_id, issue_id}
+
+:user has_many :votes, :polymorphic => true
+Agree/Disagree => Opinions
+Monitor/Dismiss => Priorities
+
+(vote with your feet/clicks)
+
+---------
+situaiton
+plan
+
+issue
+policy
+
+
+policy:plan :: issue:situation
+prediction
+
+----------
+user
+|
+issue
+	accepts_nested_resources_for :user
+|
+policy
+	accepts_nested_resources_for [:issue, :user]
+
+
+this way creating a policy will also create an issue and a user
+	then can go back in and try and merge them appropriately
+		i.e. if the user signs in/up, associate the policies/issues they've made to the new user_id 
+
+
+user
+	has_many :issues
+	has_many :policies, :through => :issue
+
+issue
+	belongs_to :user
+	has_many :policies
+
+policy
+	belongs_to :issue
+	belongs_to :user, :through => :issue
+
+
+
+

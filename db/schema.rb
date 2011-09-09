@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908014908) do
+ActiveRecord::Schema.define(:version => 20110908062922) do
 
   create_table "comments", :force => true do |t|
     t.text      "content"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20110908014908) do
     t.integer   "user_id"
     t.string    "issue"
     t.string    "slug"
+    t.integer   "concern_id"
   end
 
   add_index "policies", ["user_id", "slug"], :name => "index_policies_on_user_id_and_cached_slug", :unique => true

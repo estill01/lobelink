@@ -89,18 +89,23 @@
 	@include box-shadow(0px 0px 4px 3px #cccac2, inset 0px 1px 6px 0px #243742, inset 0px -1px 6px 0px #243742);
 
 	#lander_input_nav {
-		width: 100%;
+		width: 99%;
 		height: 30px;
 		display: block;
-		background-color: black;
-		color:white;
+		margin: 5px auto 0px auto;
 		font-weight: normal;
 		text-align: center;
-		@include border-radius(20px 20px 0px 0px);
+		@include border-radius(17px 17px 0px 0px);
+		background-color: #f2f6f7;
+		border-bottom: 1px solid #d4d4d4;
+
+		#lander_nav_container {
+			vertical-align: center;
+			color:gray;
+		}
 	}
 
 	#form_container {
-		width: 50%;
 		margin: 0 auto;
 		padding: 10px 0;
 		text-align: center;
@@ -110,15 +115,20 @@
 		}
 
 		input {
-			font-size: 24px;
-			width: 300px;
-			border:none;
+			font-size: 18px;
+			width: 500px;
+			border:1px solid orange;
+			padding: 5px;
 			text-align:center;
 		}
 		textarea {
-			width: 300px;
+			width: 500px;
 			height: 50px;
-			border:none;
+			border: 1px solid orange;
+			padding: 5px;
+			font-size: 18px;
+			resize:none;
+
 		}
 	}
 

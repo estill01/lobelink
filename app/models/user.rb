@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-	has_many :policies
 	has_many :concerns
+	has_many :policies
 
 	extend FriendlyId
 	friendly_id :username, :use => :slugged

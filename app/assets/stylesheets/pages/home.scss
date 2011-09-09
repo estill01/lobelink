@@ -107,7 +107,7 @@
 
 	#form_container {
 		margin: 0 auto;
-		padding: 20px 0 0 0;
+		padding: 15px 0 0 0;
 		text-align: center;
 
 		input {
@@ -121,6 +121,17 @@
 			@include border-radius(10px 10px 0 0);
 			
 		}
+		textarea {
+			width: 500px;
+			height: 50px;
+			border: 1px solid lightskyblue;
+			@include border-radius(0 0 10px 10px);
+			padding: 5px;
+			margin: 0px 0px 10px 0px;
+			font-size: 18px;
+			resize:none;
+
+		}
 
 		button {
 			width: 150px;
@@ -128,17 +139,6 @@
 			padding: 5px 0; 
 		}
 
-		textarea {
-			width: 500px;
-			height: 50px;
-			border: 1px solid lightskyblue;
-			@include border-radius(0 0 10px 10px);
-			padding: 5px;
-			margin: 0px 0px 5px 0px;
-			font-size: 18px;
-			resize:none;
-
-		}
 	}
 
 } // END: 'lander_input_area'
@@ -156,6 +156,7 @@
 	height: 255px;
 	clear: both;
 	padding: 5px;
+	margin: 20px 0 0 0;
 	background-color:white;
 	
 	#featured_user {

@@ -19,16 +19,16 @@
 </section>
 
 <section id="content_overview">
-	Top Policy Makers
 	<section id="top_policy_makers">
 		<div id="featured_user">
-			<%= render :partial => 'users/user_info', :object =>  featured_user, :as => :user  %>
+		<h3>New Policies</h3>
+			<%= render :partial => 'users/user_info', :collection =>  newest_policies, :as => :user  %>
 		</div>
-		<%= render :partial => 'home_top_users' %>
 	</section>
 	<section id="hot_issues">
 		<div id="issue_container">
-				<%= image_tag("issues/libya.jpeg") %>
+		<h3>Top Policy Makers</h3>
+		<%= render :partial => 'home_top_users' %>
 		</div>
 	</section>
 </section>
@@ -36,6 +36,7 @@
 <!--		<h1>Leading Policy Makers</h1> <%= link_to("view all →", users_path, :id => "view_all") %>	-->
 <!--		<h1>Top Issues</h1> -->
 				<!-- 
+				<%= image_tag("issues/libya.jpeg") %>
 				<%= image_tag("issues/code_literacy.png") %>
 				<%= image_tag("issues/privacy.jpg") %>
 				-->

@@ -8,18 +8,20 @@
 		<header class="details_header">
 			<h2><%= link_to(user.username.capitalize, user_path(user), :class => 'header_link') %></h2>
 			<p class="subtext">
-				Engaged in society for <%= distance_of_time_in_words(user.created_at, Time.now) %> 
+					Policy on: <%= user.latest_policy.issue %><br/>
+					<% policy_blurb = user.latest_policy.position.capitalize %>
+					<u><%= link_to(truncate(policy_blurb, :length => 50), user_path(user)) %></u><br/>
+					<% explanation_blurb = user.latest_policy.explanation.capitalize %>
+					<%= link_to(truncate(explanation_blurb, :length => 120), user_path(user)) %>
 			</p>
 		</header>
 		<div class="details_body">
 
 		</div>
 		<footer class="details_footer">
-			<%= user.policies.count %> policies
 		</footer>
 	</div>
 </section>
-
 
 
 

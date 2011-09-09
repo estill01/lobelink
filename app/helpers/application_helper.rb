@@ -5,7 +5,7 @@ module ApplicationHelper
 	end
 
 	def newest_policies
-		newest = Policy.find(:all, :order => "created_at DESC", :limit => 2)
+		newest = Policy.find(:all, :order => "created_at DESC", :limit => 4)
 		@newest = []
 		newest.each do |policy|
 			@newest << User.find(policy.user_id)

@@ -8,4 +8,8 @@ class Policy < ActiveRecord::Base
 	friendly_id :issue, :use => :slugged
 
   attr_accessible :issue, :position, :explanation
+
+	validates :issue, :presence => true
+	validates :position, :presence => true
+	validates :explanation, :presence => true
 end

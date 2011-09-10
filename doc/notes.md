@@ -1,5 +1,8 @@
 # DEV NOTES #
 
+SessionsController is where will have to do the anon user synch up option when people sign in
+get the new user working for anonymous users.
+
 ---
 # DESIGN #
 ## GENERAL ##

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110908062922) do
+ActiveRecord::Schema.define(:version => 20110910102338) do
 
   create_table "comments", :force => true do |t|
     t.text      "content"
@@ -55,15 +55,16 @@ ActiveRecord::Schema.define(:version => 20110908062922) do
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
   create_table "users", :force => true do |t|
-    t.string    "username"
-    t.string    "email"
-    t.string    "password_hash"
-    t.string    "password_salt"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "slug"
-    t.integer   "policies_count", :default => 0
-    t.integer   "concerns_count", :default => 0
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.integer  "policies_count", :default => 0
+    t.integer  "concerns_count", :default => 0
+    t.boolean  "anon",           :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

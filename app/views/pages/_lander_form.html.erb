@@ -1,7 +1,8 @@
-	<input type="text-field" class="home_form_issue" placeholder="What's the issue?"/><br/>
+<%= semantic_form_for(@user,  @policy) do |form| %>
+	<%= form.semantic_errors :issue, :position, :explanation %>
+	<%= form.input :issue, :label => false, :required => true, :input_html => { :class => "home_form_issue", :placeholder => "What's the issue?" } %>
+	<%= form.input :position, :label => false, :required => true, :input_html => { :class => "home_form_policy", :placeholder => "What's your position?" } %>
+	<%= form.input :explanation, :label => false, :required => true, :input_html => { :placeholder => "Explain" } %>
 
-	<input type="text-field" class="home_form_policy" placeholder="What's your position?"/><br/>
-
-	<textarea placeholder="Explain"></textarea>
-	<br/>
-	<button class="blue button">Post</button>
+	<%= form.buttons :commit, :button_html => { :class => "blue button" } %>
+<% end %>

@@ -30,6 +30,7 @@ class User < ActiveRecord::Base
     BCrypt::Engine.hash_secret(pass, password_salt)
   end
 
+	# find users' most recent policy
 	def latest_policy
 		if self.policies == nil
 		else

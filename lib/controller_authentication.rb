@@ -21,7 +21,18 @@ module ControllerAuthentication
   end
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+		if session[:user_id]
+	    @current_user ||= User.find(session[:user_id]) 
+		else		# enabling anonymous users
+############################################################################ this is the problem area
+			anon_user = User.new
+			anon_user.username = "#{gen_anon(username)}"
+			anon_user.email = "#{gen_anon(email)}"
+			anon_user.password = "#{gen_anon(password)}"
+			anon_user.anon = true
+		#	anon_info	# notify user of their temp credentials
+			@current_user = User.find(anon_user.id)
+		end
   end
 
   def logged_in?
@@ -40,8 +51,21 @@ module ControllerAuthentication
     session[:return_to] = nil
   end
 
+	def gen_anon(arg)
+		case arg
+		when "email"
+			return Faker::Internet.email 
+		else
+			return SecureRandom.hex(4)
+		end
+	end
+	
+	# courtesy method for anonymous users so they can sign back in 
+	def anon_info
+			flash[:notice => "Generated anonymous credentials: Username|#{gen_anon.tmp_username}, Password|#{gen_anon.tmp_password}, Email|#{gen_anon.temp_email}"]
+	end
+	
   private
-
   def store_target_location
     session[:return_to] = request.url
   end

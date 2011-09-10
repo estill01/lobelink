@@ -18,7 +18,7 @@
 		<div id="overview_container">
 			<div id="latest_policies">
 				<h3>Latest Policies</h3>
-				<%= render :partial => 'users/user_info', :collection =>  newest_policies, :as => :user  %>
+				<%= render :partial => 'users/user_info', :collection => newest_policies(5), :as => :user  %>
 			</div>
 			<div id="top_policy_makers">
 				<h3>Top Policy Makers</h3>

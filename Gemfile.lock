@@ -52,6 +52,8 @@ GEM
     eventmachine (0.12.10)
     execjs (1.2.4)
       multi_json (~> 1.0)
+    faker (1.0.0)
+      i18n (~> 0.4)
     formtastic (1.2.4)
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
@@ -154,6 +156,7 @@ DEPENDENCIES
   cancan
   carrierwave
   coffee-rails (~> 3.1.0)
+  faker
   formtastic
   friendly_id (~> 4.0.0.beta8)
   gravtastic

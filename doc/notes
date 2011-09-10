@@ -1,58 +1,74 @@
+# DEV NOTES #
 
-DESIGN
-	shrink down the top issues
-		nearly thumb-nail size?
-		grid
+---
+# DESIGN #
+## GENERAL ##
+		* add subtle ivy vines wrapping around elements and the background throughout
+			** small leaves, organic looking
+			** this will be hard to do well, but could add distinaaction and a feeling of 'authoritativeness'
+			** U Chicago-esque
 
-	put an input area above issue
-		want to toss people right into the action
+## NAV BAR ##
+		* reduce height of nav
 
-	maybe put Top Policy Makers and Top Issues blocks side by side
+## LANDER ##
+		* the main form needs work
+			** align the form elements
+			** lighten up the shadows?
+			** possibly narrow the fields; make more room for 'responsive' content to the left and right
+			** make the input fields more interesting
+			** add share toggles to the right of the 'Post' button 
+				*** Twitter, Fb, etc (but keep it classy!) 
+			** add 'identity mask' toggle to post anonymously
+			** make the form protrude instead of inset?
+				*** then I could make the fields inset (as a 3-part whole) and slide down effect going into the feed might feel more natural
 
-	put some frilly document emboss type assets around the logo on the landing page
+## USER PROFILE ##
+		* make the top more useful/better 
+		* disassociate the _user_info partial from the profile view user info data 
+			> 1) 'anywhere' dogtag of user data
+			> 2) 'anywhere' dogtag of user recent policy
+			> 3) user profile view account/user overview
 
+---
+# FEATURES #
+## GENERAL ##
+	* Hook lander page form up to current_user
+		** the profile url ought to be the user id (ideal? security/privacy issue?)
+		** do not redirect; let users hang out on the lander and make more policies
+		** use a cookie comparison to offer users option to merge policies they create when not logged in with their official record if they do log in
+			*** if user has cookies turned off, flash a :notice telling them they're at risk of losing attribution for their policies
+		** add error notice area/functionality to the lander form
+			*** overlay on the fields? 
+	* update nav to replace 'log out' with user avatar
+		** click to go to profile; will help navigation for anonymous users
 
-FEATURES
-	Agree/Disagree buttons on each policy
+	* Agree/Disagree buttons on each policy
+		** add these to user profile
+	* Comments on Policies
+	* Generate short URL for each policy so people can share them around and such
+		** also, if go for private policies, then can be used for private group policy conversations
+		*** should give option to use .htaccess controls on private policies
 
-ACCOUNTS
-	password recovery
-	email verification
-		i.e. send the email with a link and such
+## ACCOUNTS ##
+		* password recovery
+		* email verification
+			** i.e. send the email with a link and such
 
-USABILITY
-	each policy should have a unique url
+## USABILITY ##
+		* add in the HTML5 Boilerplate cross-browser normalization stylesheets
+		* each policy should have a unique url
+		* Get CarrierWave going to do the image resizes
 
-	Get CarrierWave going to do the image resizes
+---
+# LEXICON #
+	* Agree/Disagree with a Policy
+	* Monitor/Dismiss an Issues
+		** get added to your profile
 
-----------
+---
+# RUMINATIONS #
 
-Agree/Disagree with a Policy
-Monitor/Dismiss an Issues
-	get added to your profile
-
-----------
-*********************** RESUME HERE ***********************
-// I think I have to go polymorphic on these things.
-
-user :has_many policies, :through => :positions
-user :has_many issues, through => :monitor
-
-policy :belongs_to  user
-policy :belongs_to issue
-
-issue :has_many policies
-issue :has_many users, :through => :monitors
-	via the Monitoring functionality; the issue gets added to the monitoring user's list of issues
-		rename concern => issue, add a Monitors table {id, user_id, issue_id}
-
-:user has_many :votes, :polymorphic => true
-Agree/Disagree => Opinions
-Monitor/Dismiss => Priorities
-
-(vote with your feet/clicks)
-
----------
 situaiton
 plan
 
@@ -63,7 +79,27 @@ policy
 policy:plan :: issue:situation
 prediction
 
-----------
+---
+# DATA MODEL
+
+:user has_many :policies, :through => :positions
+:user has_many :issues, :through => :monitor
+
+:policy belongs_to  :user
+:policy belongs_to :issue
+
+:issue has_many :policies
+:issue has_many :users, :through => :monitors
+	via the Monitoring functionality; the issue gets added to the monitoring user's list of issues
+		rename concern => issue, add a Monitors table {id, user_id, issue_id}
+
+:user has_many :votes, :polymorphic => true
+Agree/Disagree => Opinions
+Monitor/Dismiss => Priorities
+
+(vote with your feet/clicks)
+
+---
 user
 |
 issue
@@ -89,7 +125,5 @@ issue
 policy
 	belongs_to :issue
 	belongs_to :user, :through => :issue
-
-
 
 

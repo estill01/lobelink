@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>File: controller_authentication.rb [Rails Application Documentation]</title>
+
+  <link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+  <script src="../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">2011-09-03 20:23:31 -0500</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>This module is included in your application controller which makes several
+methods available to all controllers and views. Here’s a common example you
+might add to your application layout file.</p>
+
+<pre>&lt;% if logged_in? %&gt;
+  Welcome &lt;%= current_user.username %&gt;.
+  &lt;%= link_to &quot;Edit profile&quot;, edit_current_user_path %&gt; or
+  &lt;%= link_to &quot;Log out&quot;, logout_path %&gt;
+&lt;% else %&gt;
+  &lt;%= link_to &quot;Sign up&quot;, signup_path %&gt; or
+  &lt;%= link_to &quot;log in&quot;, login_path %&gt;.
+&lt;% end %&gt;</pre>
+
+<p>You can also restrict unregistered users from accessing a controller using
+a before filter. For example.</p>
+
+<pre>before_filter :login_required, :except =&gt; [:index, :show]</pre>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

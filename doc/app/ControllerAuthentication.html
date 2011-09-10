@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+  <title>Module: ControllerAuthentication</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="module">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/controller_authentication_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/controller_authentication.rb">lib/controller_authentication.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-included">::included</a></li>
+          
+          <li><a href="#method-i-current_user">#current_user</a></li>
+          
+          <li><a href="#method-i-logged_in-3F">#logged_in?</a></li>
+          
+          <li><a href="#method-i-login_required">#login_required</a></li>
+          
+          <li><a href="#method-i-redirect_to_target_or_default">#redirect_to_target_or_default</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./ErrorMessagesHelper.html">ErrorMessagesHelper</a></li>
+        
+          <li><a href="./ErrorMessagesHelper/FormBuilderAdditions.html">ErrorMessagesHelper::FormBuilderAdditions</a></li>
+        
+          <li><a href="./Ability.html">Ability</a></li>
+        
+          <li><a href="./ApplicationController.html">ApplicationController</a></li>
+        
+          <li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
+        
+          <li><a href="./Comment.html">Comment</a></li>
+        
+          <li><a href="./CommentsController.html">CommentsController</a></li>
+        
+          <li><a href="./CommentsHelper.html">CommentsHelper</a></li>
+        
+          <li><a href="./Concern.html">Concern</a></li>
+        
+          <li><a href="./ConcernsController.html">ConcernsController</a></li>
+        
+          <li><a href="./ControllerAuthentication.html">ControllerAuthentication</a></li>
+        
+          <li><a href="./LayoutHelper.html">LayoutHelper</a></li>
+        
+          <li><a href="./PagesController.html">PagesController</a></li>
+        
+          <li><a href="./PagesHelper.html">PagesHelper</a></li>
+        
+          <li><a href="./PoliciesController.html">PoliciesController</a></li>
+        
+          <li><a href="./PoliciesHelper.html">PoliciesHelper</a></li>
+        
+          <li><a href="./Policy.html">Policy</a></li>
+        
+          <li><a href="./SessionsController.html">SessionsController</a></li>
+        
+          <li><a href="./SessionsHelper.html">SessionsHelper</a></li>
+        
+          <li><a href="./User.html">User</a></li>
+        
+          <li><a href="./UsersController.html">UsersController</a></li>
+        
+          <li><a href="./UsersHelper.html">UsersHelper</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="module">ControllerAuthentication</h1>
+
+    <div id="description" class="description">
+      
+<p>This module is included in your application controller which makes several
+methods available to all controllers and views. Here’s a common example you
+might add to your application layout file.</p>
+
+<pre>&lt;% if logged_in? %&gt;
+  Welcome &lt;%= current_user.username %&gt;.
+  &lt;%= link_to &quot;Edit profile&quot;, edit_current_user_path %&gt; or
+  &lt;%= link_to &quot;Log out&quot;, logout_path %&gt;
+&lt;% else %&gt;
+  &lt;%= link_to &quot;Sign up&quot;, signup_path %&gt; or
+  &lt;%= link_to &quot;log in&quot;, login_path %&gt;.
+&lt;% end %&gt;</pre>
+
+<p>You can also restrict unregistered users from accessing a controller using
+a before filter. For example.</p>
+
+<pre>before_filter :login_required, :except =&gt; [:index, :show]</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="included-method" class="method-detail ">
+          <a name="method-c-included"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">included</span><span
+              class="method-args">(controller)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="included-source">
+<pre>
+<span class="ruby-comment"># File lib/controller_authentication.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">controller</span>)
+  <span class="ruby-identifier">controller</span>.<span class="ruby-identifier">send</span> <span class="ruby-value">:helper_method</span>, <span class="ruby-value">:current_user</span>, <span class="ruby-value">:logged_in?</span>, <span class="ruby-value">:redirect_to_target_or_default</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- included-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- included-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="current_user-method" class="method-detail ">
+          <a name="method-i-current_user"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">current_user</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="current_user-source">
+<pre>
+<span class="ruby-comment"># File lib/controller_authentication.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">current_user</span>
+  <span class="ruby-ivar">@current_user</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]) <span class="ruby-keyword">if</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- current_user-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- current_user-method -->
+
+      
+        <div id="logged_in-3F-method" class="method-detail ">
+          <a name="method-i-logged_in-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">logged_in?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="logged_in-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/controller_authentication.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logged_in?</span>
+  <span class="ruby-identifier">current_user</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- logged_in-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- logged_in-3F-method -->
+
+      
+        <div id="login_required-method" class="method-detail ">
+          <a name="method-i-login_required"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">login_required</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="login_required-source">
+<pre>
+<span class="ruby-comment"># File lib/controller_authentication.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">login_required</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">logged_in?</span>
+    <span class="ruby-identifier">store_target_location</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">login_url</span>, <span class="ruby-value">:alert</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;You must first log in or sign up before accessing this page.&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- login_required-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- login_required-method -->
+
+      
+        <div id="redirect_to_target_or_default-method" class="method-detail ">
+          <a name="method-i-redirect_to_target_or_default"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">redirect_to_target_or_default</span><span
+              class="method-args">(default, *args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="redirect_to_target_or_default-source">
+<pre>
+<span class="ruby-comment"># File lib/controller_authentication.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">redirect_to_target_or_default</span>(<span class="ruby-identifier">default</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">session</span>[<span class="ruby-value">:return_to</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">default</span>, *<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">session</span>[<span class="ruby-value">:return_to</span>] = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- redirect_to_target_or_default-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- redirect_to_target_or_default-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
